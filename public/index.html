@@ -1,9 +1,21 @@
 <html>
 <head>
 	<title></title>
+	<script type="text/javascript" src="./js/lib/lodash.min.js"></script>
 	<script type="text/javascript" src="./js/lib/angular.js"></script>
+	<script type="text/javascript" src="./js/lib/moment.min.js">
+	</script>
+	<script type="text/javascript" src="./js/lib/angular-modal-service.js"></script>
+	<script type="text/javascript" src="./js/app.js"></script>
+	<script type="text/javascript" src="./js/controller/calendarController.js"></script>
+	<script type="text/javascript" src="./js/controller/addingEventController.js"></script>
+	<script type="text/javascript" src="./js/controller/modals.js"></script>
+	<script type="text/javascript" src="./js/directives/calendar.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/modal.css">
+
+
 </head>
-<body>
- Hello wordche
+<body ng-app="my-calendar" ng-controller="modalController">
+<calendar></calendar>
 </body>
 </html>

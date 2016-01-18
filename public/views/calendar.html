@@ -1,0 +1,29 @@
+<table>
+    <tr class="months">
+        <td colspan="2" class="other"><a ng-click="previousMonth()">{{month.clone().subtract(1, 'months').format('MMMM')}}</a></td>
+        <td colspan="3">{{month.format('MMMM YYYY')}}</td>
+        <td colspan="2" class="other"><a ng-click="addMonth()">{{month.clone().add(1, 'months').format('MMMM')}}</a></td>
+    </tr>
+    <tr class="day_names">
+        <td>Sunday</td>
+        <td>Monday</td>
+        <td>Tuesday</td>
+        <td>Wednesday</td>
+        <td>Thursday</td>
+        <td>Friday</td>
+        <td>Saturday</td>
+    </tr>
+
+    <tr ng-repeat="week in weeks track by $index" class="days">
+        <td ng-repeat="day in week track by $index" ng-click="addEvent()">{{day.format('D')}}
+        </td>
+        <!-- <td>{{week[0].format('D')}}</td>
+        <td>{{week[1].format('D')}}</td>
+        <td>{{week[2].format('D')}}</td>
+        <td>{{week[3].format('D')}}</td>
+        <td>{{week[4].format('D')}}</td>
+        <td>{{week[5].format('D')}}</td>
+        <td>{{week[6].format('D')}}</td>
+ -->
+    </tr>
+</table>
